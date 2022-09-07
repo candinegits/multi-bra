@@ -15,7 +15,7 @@ Pipeline {
                 }
             }
         }
-        stage('systemcheck-carine'){
+        stage('systemcheck-carine1'){
             parallel{
                 stage('parallel-2'){
                     steps{
