@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('clone){
+              steps{
+              checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Git', url: 'https://github.com/candinegits/multi-bra.git']]])
+              }
+              }
         stage('git-clone'){
             parallel{
                 stage('paralel-1){
