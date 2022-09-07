@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git-clone'){
             parallel{
-                stage('paralel-1){
+                stage('parallel-1){
                     steps{
                         sh 'lscpu'
                     }
@@ -34,6 +34,11 @@ pipeline {
                 stage('parallel-3'){
                     steps{
                         sh 'whoami'
+                    }
+                }
+                stage('helloworld'){
+                    steps{
+                        sh 'lscpu'
                     }
                 }
             }
