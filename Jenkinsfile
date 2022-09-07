@@ -15,14 +15,14 @@ Pipeline {
                 }
             }
         }
-        stage('systemcheck-stage'){
+        stage('systemcheck-carine11'){
             parallel{
                 stage('parallel-2'){
                     steps{
                         sh'free -g'
                     }
                 }
-                stage('parallel'-2a){
+                stage('parallel'-22a){
                     steps{
                         sh'lscpu'
                     }
