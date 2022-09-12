@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        label{
+            label 'slave1'
+        }
+    }
     stages {
         stage('git-clone'){
             parallel{
@@ -32,6 +36,11 @@ pipeline {
         stage('systemanalysis-stage'){
             parallel{
                 stage('parallel-3'){
+                    agent {
+                      label{
+                      label 'slave1'
+                      }
+                   }
                     steps{
                         sh 'whoami'
                     }
